@@ -1,0 +1,18 @@
+fun main() {
+   val list  = listOf(10,20,30,40,50)
+    println("the list look slike the following list:$list")
+    println("search for this number:")
+    val input = readLine()?.toInt()
+    if (input!=null){
+        println("the index of $input is ${indexOf(list,input)}")
+    }
+
+}
+ fun indexOf(list :List<Int>, value: Int): Int{
+     for(i in 0 until list.size-1){
+         if(list[i]==value){
+             return i
+         }
+     }
+     return -1
+ }
